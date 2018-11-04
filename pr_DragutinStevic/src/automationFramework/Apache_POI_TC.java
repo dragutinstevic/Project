@@ -31,8 +31,8 @@ public class Apache_POI_TC {
 //		ClientsPageTest.setupExcel();
 //		ClientsPageTest.addNewClientTest(driver);
 		
-//		InvoicesPageTest.setupExcel();
-//		InvoicesPageTest.addNewInvoiceTest(driver);
+		InvoicesPageTest.setupExcel();
+		InvoicesPageTest.addNewInvoiceTest(driver);
 		
 //		driver.close();
 //		driver.quit();

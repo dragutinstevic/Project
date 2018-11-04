@@ -11,7 +11,7 @@ public class ClientsPageTest {
 		ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData, "Sheet3");
 	}
 
-	public static String setNewClientTest(WebDriver driver) throws Exception {
+	public static String addNewClientTest(WebDriver driver) throws Exception {
 		String clientName = ExcelUtils.getCellData(1, 1);
 		String contactName = ExcelUtils.getCellData(2, 1);
 		String email = ExcelUtils.getCellData(3, 1);

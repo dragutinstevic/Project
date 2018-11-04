@@ -11,7 +11,7 @@ public class InvoicesPageTest {
 		ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData, "Sheet4");
 	}
 
-	public static String setNewInvoiceTest(WebDriver driver) throws Exception {
+	public static String addNewInvoiceTest(WebDriver driver) throws Exception {
 		String title = ExcelUtils.getCellData(1, 1);
 		String status = ExcelUtils.getCellData(2, 1);
 		String client = ExcelUtils.getCellData(3, 1);

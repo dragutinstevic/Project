@@ -11,7 +11,7 @@ public class BusinessPageTest {
 		ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData, "Sheet2");
 	}
 
-	public static String setNewBusinessTest(WebDriver driver) throws Exception {
+	public static String addNewBusinessTest(WebDriver driver) throws Exception {
 
 		String businessName = ExcelUtils.getCellData(1, 1);
 		String country = ExcelUtils.getCellData(2, 1);

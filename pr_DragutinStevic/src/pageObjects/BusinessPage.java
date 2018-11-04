@@ -17,7 +17,7 @@ public class BusinessPage {
 	private static WebElement getAddNewBusiness(WebDriver driver) {
 		WebDriverWait wait = new WebDriverWait(driver, 5);
 		element = wait.until(ExpectedConditions
-				.visibilityOfElementLocated(By.xpath("//a[@id='set-new-business']//div[@class='v-btn__content']")));
+				.visibilityOfElementLocated(By.xpath("//a[@id='add-new-business']//div[@class='v-btn__content']")));
 		return element;
 	}
 
@@ -108,7 +108,7 @@ public class BusinessPage {
 	private static WebElement getAddBankAccount(WebDriver driver) {
 		WebDriverWait wait = new WebDriverWait(driver, 5);
 		element = wait.until(ExpectedConditions.visibilityOfElementLocated(
-				By.xpath("//button[@id='business-form-set-bank-btn']//div[@class='v-btn__content']")));
+				By.xpath("//button[@id='business-form-add-bank-btn']//div[@class='v-btn__content']")));
 		return element;
 	}
 
@@ -181,7 +181,7 @@ public class BusinessPage {
 	}
 
 	private static WebElement getsetBankButton(WebDriver driver) {
-		element = driver.findElement(By.xpath("//div[contains(text(),'set bank account')]"));
+		element = driver.findElement(By.xpath("//div[contains(text(),'Add bank account')]"));
 		return element;
 	}
 

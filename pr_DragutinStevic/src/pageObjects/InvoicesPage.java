@@ -17,7 +17,7 @@ public class InvoicesPage {
 	private static WebElement getAddNewInvoice(WebDriver driver) {
 		WebDriverWait wait = new WebDriverWait(driver, 5);
 		element = wait.until(ExpectedConditions
-				.visibilityOfElementLocated(By.xpath("//a[@id='set-new-invoice']//div[@class='v-btn__content']")));
+				.visibilityOfElementLocated(By.xpath("//a[@id='add-new-invoice']//div[@class='v-btn__content']")));
 		return element;
 	}
 
@@ -153,7 +153,7 @@ public class InvoicesPage {
 	}
 
 	private static WebElement getAddContent(WebDriver driver) {
-		element = driver.findElement(By.xpath("//button[@id='set-content-btn']//div[@class='v-btn__content']"));
+		element = driver.findElement(By.xpath("//button[@id='add-content-btn']//div[@class='v-btn__content']"));
 		return element;
 	}
 

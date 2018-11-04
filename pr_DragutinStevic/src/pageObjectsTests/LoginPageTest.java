@@ -18,8 +18,8 @@ public class LoginPageTest {
 		LoginPage.setEmail(driver, email);
 		LoginPage.setPassword(driver, password);
 		LoginPage.login(driver);
-		//LoginPage.activityLog(driver);
-		//LoginPage.logout(driver);
+//		LoginPage.activityLog(driver);
+//		LoginPage.logout(driver);
 		return "Pass";
 	}
 }
