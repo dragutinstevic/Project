@@ -75,9 +75,10 @@ public class InvoicesPage {
 		List<WebElement> clientList = driver.findElements(By.xpath("//div[@class='v-list__tile__title']"));
 		int listSize = clientList.size();
 		for (int i = 0; i < listSize; i++) {
-			WebElement e = clientList.get(i);
-			if (e.getText().equals(client)) {
-				e.click();
+			WebElement element = clientList.get(i);
+			if (element.getText().equals(client)) {
+				element.click();
+				break;
 			}
 		}
 	}
@@ -96,6 +97,7 @@ public class InvoicesPage {
 			WebElement element = businessList.get(i);
 			if (element.getText().equals(business)) {
 				element.click();
+				break;
 			}
 		}
 	}
