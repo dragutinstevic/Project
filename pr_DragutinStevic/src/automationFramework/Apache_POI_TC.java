@@ -25,14 +25,14 @@ public class Apache_POI_TC {
 		LoginPageTest.setupExcel();
 		LoginPageTest.SignInTest(driver);
 		
-//		BusinessPageTest.setupExcel();
-//		BusinessPageTest.addNewBusinessTest(driver);
+		BusinessPageTest.setupExcel();
+		BusinessPageTest.addNewBusinessTest(driver);
 		
 //		ClientsPageTest.setupExcel();
 //		ClientsPageTest.addNewClientTest(driver);
 		
-		InvoicesPageTest.setupExcel();
-		InvoicesPageTest.addNewInvoiceTest(driver);
+//		InvoicesPageTest.setupExcel();
+//		InvoicesPageTest.addNewInvoiceTest(driver);
 		
 //		driver.close();
 //		driver.quit();
