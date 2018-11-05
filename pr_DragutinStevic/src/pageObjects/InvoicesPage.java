@@ -121,7 +121,7 @@ public class InvoicesPage {
 	}
 
 	public static void setDateSubmitted(WebDriver driver, String dateSubmitted) {
-		getDateSubmitted(driver).sendKeys(dateSubmitted);
+		getDateSubmitted(driver).click();
 	}
 
 	private static WebElement getDueDate(WebDriver driver) {
@@ -130,7 +130,7 @@ public class InvoicesPage {
 	}
 
 	public static void setDueDate(WebDriver driver, String dueDate) {
-		getDueDate(driver).sendKeys(dueDate);
+		getDueDate(driver).click();
 	}
 
 	private static WebElement getBasis(WebDriver driver) {

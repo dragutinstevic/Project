@@ -101,12 +101,12 @@ public class ClientsPage {
 	}
 
 	private static WebElement getDateAdded(WebDriver driver) {
-		element = driver.findElement(By.xpath("//input[@aria-label='Date Added']"));
+		element = driver.findElement(By.xpath("//label[contains(text(),'Date Added')]"));
 		return element;
 	}
 
 	public static void setDateAdded(WebDriver driver, String dateAdded) {
-		getDateAdded(driver).sendKeys(dateAdded);
+		getDateAdded(driver).click();
 	}
 
 	private static WebElement getCode(WebDriver driver) {
@@ -119,12 +119,12 @@ public class ClientsPage {
 	}
 
 	private static WebElement getAgreementDate(WebDriver driver) {
-		element = driver.findElement(By.xpath("//input[@aria-label='Agreement Date']"));
+		element = driver.findElement(By.xpath("//label[contains(text(),'Agreement Date')]"));
 		return element;
 	}
 
 	public static void setAgreementDate(WebDriver driver, String agreementDate) {
-		getAgreementDate(driver).sendKeys(agreementDate);
+		getAgreementDate(driver).click();
 	}
 
 	private static WebElement getStatus(WebDriver driver) {
