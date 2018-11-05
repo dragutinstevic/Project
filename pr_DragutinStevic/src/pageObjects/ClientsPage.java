@@ -14,8 +14,8 @@ public class ClientsPage {
 
 	private static WebElement getAddNewClient(WebDriver driver) {
 		WebDriverWait wait = new WebDriverWait(driver, 5);
-		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(
-				"//a[@class='primary mt-5 mr-5 v-btn v-btn--flat v-btn--router v-btn--small']//div[@class='v-btn__content']")));
+		element = wait.until(
+				ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'Add new client')]")));
 		return element;
 	}
 
@@ -25,8 +25,8 @@ public class ClientsPage {
 
 	private static WebElement getClientName(WebDriver driver) {
 		WebDriverWait wait = new WebDriverWait(driver, 5);
-		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(
-				"//*[@id=\"app\"]/div[6]/main/div/div/div[2]/div[2]/div/div[1]/div/form/div[1]/div[1]/div/div[2]/div[1]/div/input")));
+		element = wait
+				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@aria-label='Client Name']")));
 		return element;
 	}
 
@@ -35,8 +35,7 @@ public class ClientsPage {
 	}
 
 	private static WebElement getContactName(WebDriver driver) {
-		element = driver.findElement(By.xpath(
-				"//form[@class='ma-2 pa-3 text-xs-center']//div[1]//div[2]//div[1]//div[2]//div[1]//div[1]//input[1]"));
+		element = driver.findElement(By.xpath("//input[@aria-label='Contact Name']"));
 		return element;
 	}
 
@@ -45,7 +44,7 @@ public class ClientsPage {
 	}
 
 	private static WebElement getEmail(WebDriver driver) {
-		element = driver.findElement(By.xpath("//div[@class='flex xs6 mr-2']//input[@type='text']"));
+		element = driver.findElement(By.xpath("//input[@aria-label='E-mail']"));
 		return element;
 	}
 
@@ -54,8 +53,7 @@ public class ClientsPage {
 	}
 
 	private static WebElement getRegistryNumber(WebDriver driver) {
-		element = driver.findElement(By.xpath(
-				"//form[@class='ma-2 pa-3 text-xs-center']//div[2]//div[2]//div[1]//div[2]//div[1]//div[1]//input[1]"));
+		element = driver.findElement(By.xpath("//input[@aria-label='Registry Number']"));
 		return element;
 	}
 
@@ -64,7 +62,7 @@ public class ClientsPage {
 	}
 
 	private static WebElement getCountry(WebDriver driver) {
-		element = driver.findElement(By.xpath("//div[@class='v-select__slot']//input[@type='text']"));
+		element = driver.findElement(By.xpath("//input[@aria-label='Countries']"));
 		return element;
 	}
 
@@ -76,8 +74,7 @@ public class ClientsPage {
 	}
 
 	private static WebElement getCity(WebDriver driver) {
-		element = driver.findElement(By.xpath(
-				"//form[@class='ma-2 pa-3 text-xs-center']//div[3]//div[2]//div[1]//div[2]//div[1]//div[1]//input[1]"));
+		element = driver.findElement(By.xpath("//input[@aria-label='City']"));
 		return element;
 	}
 
@@ -86,8 +83,7 @@ public class ClientsPage {
 	}
 
 	private static WebElement getStreet(WebDriver driver) {
-		element = driver.findElement(By.xpath(
-				"//*[@id=\"app\"]/div[6]/main/div/div/div[2]/div[2]/div/div[1]/div/form/div[3]/div[3]/div/div[2]/div[1]/div/input"));
+		element = driver.findElement(By.xpath("//input[@aria-label='Street']"));
 		return element;
 	}
 
@@ -96,8 +92,7 @@ public class ClientsPage {
 	}
 
 	private static WebElement getZip(WebDriver driver) {
-		element = driver.findElement(By.xpath(
-				"//div[@class='layout']//div[@class='layout']//div[4]//div[1]//div[2]//div[1]//div[1]//input[1]"));
+		element = driver.findElement(By.xpath("//input[@aria-label='Zip']"));
 		return element;
 	}
 
@@ -106,8 +101,7 @@ public class ClientsPage {
 	}
 
 	private static WebElement getDateAdded(WebDriver driver) {
-		element = driver.findElement(
-				By.xpath("//div[@class='flex xs3']//div[@class='v-dialog__container']//input[@type='text']"));
+		element = driver.findElement(By.xpath("//input[@aria-label='Date Added']"));
 		return element;
 	}
 
@@ -116,8 +110,7 @@ public class ClientsPage {
 	}
 
 	private static WebElement getCode(WebDriver driver) {
-		element = driver.findElement(By.xpath(
-				"//*[@id=\"app\"]/div[6]/main/div/div/div[2]/div[2]/div/div[1]/div/form/div[4]/div[2]/div/div[2]/div[1]/div/input"));
+		element = driver.findElement(By.xpath("//input[@aria-label='Code']"));
 		return element;
 	}
 
@@ -126,7 +119,7 @@ public class ClientsPage {
 	}
 
 	private static WebElement getAgreementDate(WebDriver driver) {
-		element = driver.findElement(By.xpath("//div[@class='flex xs3 ml-3']//input[@type='text']"));
+		element = driver.findElement(By.xpath("//input[@aria-label='Agreement Date']"));
 		return element;
 	}
 
@@ -161,14 +154,14 @@ public class ClientsPage {
 		getSaveButton(driver).click();
 	}
 
-	private static WebElement getBackToClientsList(WebDriver driver) {
+	private static WebElement getBackToClientList(WebDriver driver) {
 		WebDriverWait wait = new WebDriverWait(driver, 5);
-		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(
-				"//a[@class='primary mt-5 mr-5 v-btn--active v-btn v-btn--flat v-btn--router v-btn--small']//div[@class='v-btn__content']")));
+		element = wait.until(ExpectedConditions
+				.visibilityOfElementLocated(By.xpath("//div[contains(text(),'Back to client list')]")));
 		return element;
 	}
 
-	public static void backToClientsList(WebDriver driver) {
-		getBackToClientsList(driver).click();
+	public static void backToClientList(WebDriver driver) {
+		getBackToClientList(driver).click();
 	}
 }

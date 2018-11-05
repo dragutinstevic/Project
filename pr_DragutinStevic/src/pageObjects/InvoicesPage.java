@@ -16,8 +16,8 @@ public class InvoicesPage {
 
 	private static WebElement getAddNewInvoice(WebDriver driver) {
 		WebDriverWait wait = new WebDriverWait(driver, 5);
-		element = wait.until(ExpectedConditions
-				.visibilityOfElementLocated(By.xpath("//a[@id='add-new-invoice']//div[@class='v-btn__content']")));
+		element = wait.until(
+				ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'Add new invoice')]")));
 		return element;
 	}
 
@@ -44,7 +44,7 @@ public class InvoicesPage {
 
 	private static List<WebElement> getStatusLabel(WebDriver driver) {
 		List<WebElement> list = new ArrayList<WebElement>();
-		list.add(driver.findElement(By.xpath("//div[@class='v-list__tile__title'][contains(text(),'Draft')]")));
+		list.add(driver.findElement(By.xpath("//div[contains(text(),'Draft')]")));
 		list.add(driver.findElement(By.xpath("//div[contains(text(),'Sent')]")));
 		list.add(driver.findElement(By.xpath("//div[contains(text(),'Paid')]")));
 		list.add(driver.findElement(By.xpath("//div[contains(text(),'Invalidated')]")));
@@ -245,8 +245,7 @@ public class InvoicesPage {
 
 	private static WebElement getBackToInvoicesList(WebDriver driver) {
 		WebDriverWait wait = new WebDriverWait(driver, 5);
-		element = wait.until(ExpectedConditions
-				.visibilityOfElementLocated(By.xpath("//a[@id='inv-form-back-btn']//div[@class='v-btn__content']")));
+		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'back')]")));
 		return element;
 	}
 
