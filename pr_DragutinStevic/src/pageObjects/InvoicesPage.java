@@ -186,8 +186,9 @@ public class InvoicesPage {
 		return element;
 	}
 
-	public static void setDays(WebDriver driver, String days) {
+	public static void setDays(WebDriver driver, String days) throws InterruptedException {
 		getDays(driver).click();
+		Thread.sleep(1000);
 		getDays(driver).clear();
 		getDays(driver).sendKeys(days);
 	}
@@ -197,8 +198,9 @@ public class InvoicesPage {
 		return element;
 	}
 
-	public static void setRatePerHour(WebDriver driver, String ratePerHour) {
+	public static void setRatePerHour(WebDriver driver, String ratePerHour) throws InterruptedException {
 		getRatePerHour(driver).click();
+		Thread.sleep(1000);
 		getRatePerHour(driver).clear();
 		getRatePerHour(driver).sendKeys(ratePerHour);
 	}
